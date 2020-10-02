@@ -50,6 +50,7 @@ namespace InfiniTimer
             }
             timerMin.Value = Properties.Settings.Default.Min;
             timerMax.Value = Properties.Settings.Default.Max;
+            timerUnit.Text = Properties.Settings.Default.UnitName;
             alarmSound.Load();
         }
 
@@ -97,6 +98,24 @@ namespace InfiniTimer
                 Properties.Settings.Default.Options = JsonConvert.SerializeObject(optionsList.Items.Cast<Option>().ToArray());
                 Properties.Settings.Default.Save();
             }
+        }
+
+        private void TimerMin_ValueChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Min = timerMin.Value;
+            Properties.Settings.Default.Save();
+        }
+
+        private void TimerMax_ValueChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Max = timerMax.Value;
+            Properties.Settings.Default.Save();
+        }
+
+        private void TimerUnit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.UnitName = timerUnit.Text;
+            Properties.Settings.Default.Save();
         }
 
         private void StartTimer(object sender = null, EventArgs e = null)
@@ -179,18 +198,6 @@ namespace InfiniTimer
             }
 
             StartTimer();
-        }
-
-        private void TimerMin_ValueChanged(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.Min = timerMin.Value;
-            Properties.Settings.Default.Save();
-        }
-
-        private void TimerMax_ValueChanged(object sender, EventArgs e)
-        {
-            Properties.Settings.Default.Max = timerMax.Value;
-            Properties.Settings.Default.Save();
         }
     }
 

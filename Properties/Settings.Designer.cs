@@ -58,5 +58,17 @@ namespace InfiniTimer.Properties {
                 this["Max"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Seconds")]
+        public string UnitName {
+            get {
+                return ((string)(this["UnitName"]));
+            }
+            set {
+                this["UnitName"] = value;
+            }
+        }
     }
 }

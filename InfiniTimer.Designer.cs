@@ -150,6 +150,7 @@
             this.timerUnit.Size = new System.Drawing.Size(90, 21);
             this.timerUnit.TabIndex = 2;
             this.timerUnit.Text = "Seconds";
+            this.timerUnit.SelectedIndexChanged += new System.EventHandler(this.TimerUnit_SelectedIndexChanged);
             // 
             // timerMin
             // 

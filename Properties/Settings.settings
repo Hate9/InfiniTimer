@@ -11,5 +11,8 @@
     <Setting Name="Max" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="UnitName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Seconds</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
